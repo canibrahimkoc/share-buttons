@@ -1,0 +1,14 @@
+<div class="social-buttons">
+    <span>Paylaş</span>
+    <div class="social">
+        <a href="http://www.facebook.com/sharer.php?u=@Url.RouteUrl("Product", new { SeName = Model.SeName }, this.Url.ActionContext.HttpContext.Request.Scheme)" rel="nofollow" target="_blank" class="facebook"></a>
+        <a href="https://twitter.com/share?url=@Url.RouteUrl("Product", new { SeName = Model.SeName }, this.Url.ActionContext.HttpContext.Request.Scheme)&amp;text=@Model.Name" rel="nofollow" target="_blank" class="twitter"></a>
+        <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" rel="nofollow" target="_blank" class="pintrest"></a>
+        <a href="whatsapp://send?text=@Model.Name" data-action="share/whatsapp/share" rel="nofollow" target="_blank" class="whatsapp"></a>
+        <a href="mailto:?@Model.Name&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 @Url.RouteUrl("Product", new { SeName = Model.SeName }, this.Url.ActionContext.HttpContext.Request.Scheme)" rel="nofollow" target="_blank" class="mail"></a>
+    </div>
+</div>
+<div class="order-buttons">
+    <a href="tel:+908508888738" class="order-by-phone">Telefon ile sipariş ver</a>
+    <a href="https://api.whatsapp.com/send?phone=905550381738&amp;text=@Model.Name" class="order-by-whatsapp">Whatsapp ile sipariş ver</a>
+</div>
