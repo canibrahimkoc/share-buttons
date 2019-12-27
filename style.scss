@@ -1,0 +1,135 @@
+            .social-buttons {
+                padding: 20px;
+                border-bottom: 1px solid #d1dbef;
+                border-top: 1px solid #d1dbef;
+                @include flexbox;
+                @include flex-wrap(wrap);
+
+                span {
+                    color: #969696;
+                    font-size: 14px;
+                    font-weight: 500;
+                    @include align-self(center);
+                    margin-right: 10px;
+                }
+
+                .social {
+                    a {
+                        background-color: #d2dcf0;
+                        border-radius: 100%;
+                        height: 35px;
+                        width: 35px;
+                        margin-left: 10px;
+                        display: inline-block;
+                        position: relative;
+                        @include transition(.2s);
+
+                        &:before {
+                            font-size: 17px;
+                            font-family: "FaprikaBrand";
+                            position: absolute;
+                            font-weight: 300;
+                            top: 0;
+                            left: 0;
+                            text-align: center;
+                            width: 35px;
+                            color: #fff;
+                            line-height: 35px;
+                        }
+
+                        &.facebook {
+                            &:hover {
+                                background-color: #3b5997;
+                            }
+
+                            &:before {
+                                content: "\f39e";
+                            }
+                        }
+
+                        &.twitter {
+                            &:hover {
+                                background-color: #4895f1;
+                            }
+
+                            &:before {
+                                content: "\f099";
+                            }
+                        }
+
+                        &.pintrest {
+                            &:hover {
+                                background-color: #cc3441;
+                            }
+
+                            &:before {
+                                content: "\f231";
+                            }
+                        }
+
+                        &.whatsapp {
+                            &:hover {
+                                background-color: #00a000;
+                            }
+
+                            &:before {
+                                font-size: 19px;
+                                content: "\f232";
+                            }
+                        }
+
+                        &.mail {
+                            &:hover {
+                                background-color: #37465d;
+                            }
+
+                            &:before {
+                                content: "\f0e0";
+                                font-family: "Faprika";
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .order-buttons {
+                @include flexbox;
+                @include flex-wrap(wrap);
+                padding-top: 15px;
+
+                a {
+                    @include flex(1);
+                    position: relative;
+                    white-space: nowrap;
+                    margin: 0 10px;
+                }
+
+                .order-by-whatsapp {
+                    @include centered;
+                    @include button(#3faf6c, $btn-height-lg);
+                    line-height: 28px;
+
+                    &:before {
+                        content: "\f232";
+                        font-family: "FaprikaBrand";
+                        font-weight: 400;
+                        font-size: 28px;
+                        margin-right: 10px;
+                    }
+                }
+
+                .order-by-phone {
+                    @include centered;
+                    @include button($color-primary, $btn-height-lg);
+                    line-height: 28px;
+
+                    &:before {
+                        content: "\f095";
+                        font-family: "Faprika";
+                        font-weight: 900;
+                        font-size: 28px;
+                        margin-right: 10px;
+                    }
+                }
+            }
